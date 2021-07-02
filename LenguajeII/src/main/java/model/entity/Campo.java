@@ -1,4 +1,4 @@
-package Model.Emptity;
+package model.entity;
 
 import java.util.List;
 
@@ -8,4 +8,5 @@ public class Campo {
     private EstadoCampo estado ;
     private Provincia provincia ;
     private List<Lote> lote ;
+
 }

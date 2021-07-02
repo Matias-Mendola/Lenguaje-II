@@ -1,4 +1,4 @@
-package Model.Emptity;
+package model.entity;
 
 public class Proyecto {
     private String numeroDeProyecto;

@@ -1,4 +1,4 @@
-package Model.Emptity;
+package model.entity;
 
 import java.util.List;
 

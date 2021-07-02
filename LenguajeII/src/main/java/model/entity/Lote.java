@@ -1,14 +1,10 @@
-package Model.Emptity;
-
-import java.util.List;
+package model.entity;
 
 public class Lote {
     private String numeroLote;
-    private Float superficie;
+    private String superficie;
     private  TipoDeSuelo descripcionDeSuelo;
     private EstadoDeLote estadoDeLote;
     private Proyecto proyecto;
-    private List<Laboreo> trabajoRealizado ;
-
 
 }

@@ -1,4 +1,4 @@
-package Model.Emptity;
+package model.entity;
 
 public class EstadoDeProyecto {
     private String descripcion;
