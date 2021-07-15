@@ -45,10 +45,11 @@ public class CampoRepository {
         crearCampo.setCantidadLotes(lotes);
 
         this.campo.add(crearCampo);
+        empresa.getCampo().add(crearCampo);
         System.out.println("campo agregado");
     }
     public void buscarCampoPorNombre (String nombre ){
-        for (Campo cr:getCampo())
+        for (Campo cr: empresa.getCampo())
 
                   if (cr.getNombre().equals(nombre)){
                       System.out.println(" nombre  :"+cr.getNombre());
@@ -61,9 +62,9 @@ public class CampoRepository {
 
         }
         public void eliminarUnCampo(String nombre){
-            for (Campo cr:getCampo()) {
+            for (Campo cr:empresa.getCampo()) {
                 if (cr.getNombre().equals(nombre)){
-                    campo.remove(cr);
+                    empresa.getCampo().remove(cr);
                 }
             }
         }
