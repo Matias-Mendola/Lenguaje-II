@@ -9,12 +9,7 @@ public class Empresa {
     private String email ;
     private List<Campo> campo ;
 
-    public Empresa(String nombre, String cuit, String direccion, String email) {
-        this.nombre = nombre;
-        this.cuit = cuit;
-        this.direccion = direccion;
-        this.email = email;
-    }
+
 
     public Empresa() {
     }
