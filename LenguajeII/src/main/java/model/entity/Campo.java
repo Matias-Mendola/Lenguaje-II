@@ -8,11 +8,19 @@ public class Campo {
     private String superficie ;
     private String estado ;
     private String provincia ;
-    private int cantidadLotes;
+    private String cantidadLotes;
     private List<Lote> lote ;
 
     public Campo() {
 
+    }
+
+    public Campo(String nombre, String superficie, String estado, String provincia, String cantidadLotes) {
+        this.nombre = nombre;
+        this.superficie = superficie;
+        this.estado = estado;
+        this.provincia = provincia;
+        this.cantidadLotes = cantidadLotes;
     }
 
     public String getNombre() {
@@ -47,11 +55,11 @@ public class Campo {
         this.provincia = provincia;
     }
 
-    public int getCantidadLotes() {
+    public String getCantidadLotes() {
         return cantidadLotes;
     }
 
-    public void setCantidadLotes(int cantidadLotes) {
+    public void setCantidadLotes(String cantidadLotes) {
         this.cantidadLotes = cantidadLotes;
     }
 

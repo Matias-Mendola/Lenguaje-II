@@ -29,7 +29,7 @@ public void modificarNombre(){
         Scanner entrada = new Scanner(System.in);
         String nombre;
     System.out.println("ingrese el nuevo nombre de la empresa");
-    nombre=entrada.nextLine();
+    nombre = entrada.nextLine();
     repositoryEmpresa.setNombreEmpresa(nombre);
 }
 public void modificarCuit(){
@@ -46,12 +46,63 @@ public void modificarDomicilio(){
     domicilio=entrada.nextLine();
     repositoryEmpresa.setDomicilioEmpresa(domicilio);
 }
-public void modiicarEmail(){
+public void modificarEmail(){
     Scanner entrada = new Scanner(System.in);
     String email;
     System.out.println("ingrese el nuevo email de la empresa");
     email=entrada.nextLine();
     repositoryEmpresa.setEmailEmpresa(email);
 }
+    public void registrarUnCampo(){
+        String nombre,estado,superficie,provincia,lotes;
 
+        System.out.println("acontinuacion ingrese los datos del campo a registar");
+        System.out.println("ingrese el nombre del Campo:");
+        Scanner entrada = new Scanner(System.in);
+        nombre = entrada.nextLine();
+        System.out.println("ahora ingrese la supericie del campo en hectareas:");
+        superficie = entrada.nextLine();
+        System.out.println("ingrese la provincia donde se encuentra el campo");
+        provincia=entrada.nextLine();
+        System.out.println("ingrese en numero entero la cantidad de lotes con los que cuenta el campo:");
+        lotes= entrada.nextLine();
+        System.out.println("por ultimo especifique el estado en el que se encuentra el campo:");
+        estado = entrada.nextLine();
+        repositoryEmpresa.registro(nombre,superficie,lotes,provincia,estado);}
+    public void listarCampos(){repositoryEmpresa.conocerListaDeCampos();}
+    public void eliminarCampo (){
+        Scanner entrada=new Scanner(System.in);
+        String nombre;
+        System.out.println("ingrese el nombre del campo que desea eliminar de la lista");
+        nombre = entrada.nextLine();
+        repositoryEmpresa.eliminarUnCampo(nombre);
+
+    }
+    public void modificarDatos(){
+        Scanner entrada = new Scanner(System.in);
+        String nombre;
+        int eleccion;
+        System.out.println("ingrese el nombre del campo que desea modificar");
+        nombre = entrada.nextLine();
+        System.out.println("¿Que dato desea modificar?");
+        System.out.println("1 para modificar nombre");
+        System.out.println("2 para modificar superficie");
+        System.out.println("3 para modificar provincia donde se encuentra");
+        System.out.println("4 para modificar el estado del campo");
+        System.out.println("5 para modificar la cantidad de lotes que contiene");
+        entrada = new Scanner(System.in);
+        eleccion=entrada.nextInt();
+        if (eleccion==1){repositoryEmpresa.modificarNombreDeCampo(nombre);}
+        else if(eleccion==2){repositoryEmpresa.modificarSuperficieDeCampo(nombre);}
+        else if(eleccion==3){repositoryEmpresa.modificarProvinciaDeCampo(nombre);}
+        else if(eleccion==4){repositoryEmpresa.modificarEstadoDeCampo(nombre);}
+        else if(eleccion ==5){repositoryEmpresa.modificarCantidadDeLotesDeCampo(nombre);}
+    }
+    public void buscarCampo(){
+        Scanner entrada = new Scanner(System.in);
+        String nombre;
+        System.out.println("ingrese el nombre del campo que desea buscar");
+        nombre = entrada.nextLine();
+        repositoryEmpresa.buscarCampo(nombre);
+    }
 }
